@@ -1,0 +1,294 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.header {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.resource-links {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #3498db;
+}
+
+.resource-links h3 {
+    margin-top: 0;
+    color: #2980b9;
+}
+
+.resourceLink {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin: 5px 0;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.resourceLink:hover {
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+}
+
+.prototype-links {
+    background-color: #fff3cd;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #f39c12;
+}
+
+.prototype-links h3 {
+    margin-top: 0;
+    color: #d68910;
+}
+
+.prototype-links a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.prototype-links a:hover {
+    text-decoration: underline;
+}
+
+.timeline {
+    background-color: #d4edda;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #28a745;
+}
+
+.main-link {
+    display: inline-block;
+    background-color: #8b4513;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.main-link:hover {
+    background-color: #a0522d;
+    text-decoration: none;
+    color: white;
+}
+
+/* Skills Learned Section */
+.skills-learned {
+    background-color: #e8f4fd;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #17a2b8;
+}
+
+.skills-learned h3 {
+    margin-top: 0;
+    color: #0c5460;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.skill-category {
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex: 1;
+}
+
+.skill-category h4 {
+    color: #495057;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    border-bottom: 2px solid #17a2b8;
+    padding-bottom: 8px;
+}
+
+.skill-category ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.skill-category li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f8f9fa;
+    color: #343a40;
+    font-size: 0.95em;
+}
+
+.skill-category li:last-child {
+    border-bottom: none;
+}
+
+.skill-category li:hover {
+    background-color: #f8f9fa;
+    padding-left: 10px;
+    transition: all 0.2s ease;
+}
+
+/* Image container and centered button */
+.image-container {
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-center {
+    margin-top: 15px;
+}
+
+/* Hover effect for clickable images */
+.coffee-logo {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coffee-logo:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Modal Styles */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+    display: block;
+    margin: 2% auto;
+    max-width: 96%;
+    max-height: 92vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: #bbb;
+}
+
+.modal-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #f1f1f1;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Animation for modal */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive design for skills flex */
+@media (max-width: 768px) {
+    .skills-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .modal-content {
+        max-width: 98%;
+        max-height: 85vh;
+    }
+
+    .modal-close {
+        top: 10px;
+        right: 20px;
+        font-size: 35px;
+    }
+
+    .modal-caption {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        max-width: 98%;
+        max-height: 75vh;
+        margin: 5% auto;
+    }
+
+    .modal-close {
+        top: 5px;
+        right: 15px;
+        font-size: 30px;
+    }
+
+    .modal-caption {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}

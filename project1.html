@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - SQL Database Management</title>
+    <link rel="stylesheet" href="project1.css">
+</head>
+
+
+<body>
+
+    <main class="container">
+        <header class="header">
+            <h1>Project 1: SQL Database Management</h1>
+            <p>CGS 2545C - Database Concepts Course Project</p>
+        </header>
+
+        <section class="section project-images">
+            <h2>Project Images</h2>
+            <figure class="project-image">
+                <img src="ShowEmployees.PNG" alt="SQL Query Results Showing Employee Data" onclick="openImageModal(this.src, this.alt)">
+                <figcaption class="image-caption">Employee Data Query Results</figcaption>
+            </figure>
+            <figure class="project-image">
+                <img src="DatabaseDiagram_SQL2.PNG" alt="Entity Relationship Diagram" onclick="openImageModal(this.src, this.alt)">
+                <figcaption class="image-caption">Database Schema Diagram</figcaption>
+            </figure>
+        </section>
+
+        <!-- Image Modal for image zoom -->
+        <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" class="modal-content" src="DatabaseDiagram_SQL2.PNG" alt="Enlarged image">
+            <p id="modalCaption" class="modal-caption"></p>
+        </div>
+
+        <section class="section">
+            <h2>Project Overview</h2>
+            <p>This project was a comprehensive database management assignment for CGS 2545C at the University of Central Florida, focusing on practical SQL implementation and database design principles.</p>
+
+            <p>The semester-long project was developed incrementally, with weekly milestones that built upon each other to create a fully functional database system with proper relationships and data integrity.</p>
+        </section>
+
+        <section class="section requirements">
+            <h3>Project Requirements</h3>
+            <p>The cumulative project assignment required me to:</p>
+            <ol>
+                <li><strong>Design and implement a relational database</strong> using proper normalization principles</li>
+                <li><strong>Create multiple related tables</strong> with appropriate data types and constraints</li>
+                <li><strong>Write and implement database triggers</strong> for data validation and automation</li>
+                <li><strong>Insert and update data</strong> using various SQL manipulation techniques</li>
+                <li><strong>Generate a comprehensive Entity Relationship diagram</strong> to visualize the database structure and relationships</li>
+            </ol>
+        </section>
+
+        <aside class="section highlight-box">
+            <h4>Key Learning Outcomes</h4>
+            <p>This project provided hands-on experience with real-world database development, from conceptual design through implementation, updates, and maintenance.</p>
+        </aside>
+
+        <section class="section skills-section">
+            <h3>Skills Developed</h3>
+            <ul>
+                <li><strong>SQL Programming:</strong> Advanced query writing, data manipulation, and database operations</li>
+                <li><strong>Database Design:</strong> Entity-relationship modeling and schema development</li>
+                <li><strong>Data Integrity:</strong> Implementing constraints, triggers, and validation rules</li>
+                <li><strong>Problem Solving:</strong> Troubleshooting complex database issues and optimization</li>
+                <li><strong>Documentation:</strong> Creating clear technical diagrams and project documentation</li>
+                <li><strong>Project Management:</strong> Following structured development timelines and milestones</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h3>Technical Implementation</h3>
+            <p>The project utilized MySQL for database implementation, focusing on creating efficient, scalable database structures that could handle real-world data management scenarios. The final deliverable included a complete database schema with sample data, working queries, and comprehensive documentation. This project dealt with an airline for the database information and scenario. However, the skills and knowledge learned here can easily be adapted to many other fields that utilize databases.</p>
+        </section>
+    </main>
+
+    <!-- Script for image modal interaction-->
+    <script>
+        // Image Modal Functions
+        function openImageModal(imageSrc, imageAlt) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const captionText = document.getElementById('modalCaption');
+
+            modal.style.display = 'block';
+            modalImg.src = imageSrc;
+            modalImg.alt = imageAlt;
+            captionText.innerHTML = imageAlt;
+
+            // Prevent body scrolling when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+
+            // Restore body scrolling
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target === modal) {
+                closeImageModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeImageModal();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
